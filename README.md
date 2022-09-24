@@ -1,3 +1,3 @@
-# Waterways Croatia
+# Adria Nav
 
-Interactive map with waterways in Croatia.
+Interactive map with visualized navigation safety objects and object data in Croatian Adriatic Sea.

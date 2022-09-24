@@ -1,5 +1,5 @@
-const WaterwaysData = () => {
+const NavObjectsData = () => {
   return <div>Data</div>;
 };
 
-export default WaterwaysData;
+export default NavObjectsData;

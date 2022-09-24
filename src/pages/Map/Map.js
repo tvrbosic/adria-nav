@@ -37,7 +37,6 @@ const WaterwaysMap = () => {
       />
       <ZoomControl position="bottomleft" />
       <Markers />
-      <Rectangle bounds={mapBounds} />
     </MapContainer>
   );
 };

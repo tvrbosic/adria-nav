@@ -2,8 +2,9 @@ import {
   useMap,
   MapContainer,
   TileLayer,
+  LayersControl,
+  LayerGroup,
   ZoomControl,
-  Rectangle,
 } from 'react-leaflet';
 
 import styles from './Map.module.css';
@@ -35,8 +36,14 @@ const WaterwaysMap = () => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+      <LayersControl position="topright">
+        <LayersControl.Overlay name="Safety objects">
+          <LayerGroup>
+            <Markers />
+          </LayerGroup>
+        </LayersControl.Overlay>
+      </LayersControl>
       <ZoomControl position="bottomleft" />
-      <Markers />
     </MapContainer>
   );
 };

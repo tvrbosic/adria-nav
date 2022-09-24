@@ -1,6 +1,13 @@
-import { useMap, MapContainer, TileLayer, Rectangle } from 'react-leaflet';
+import {
+  useMap,
+  MapContainer,
+  TileLayer,
+  ZoomControl,
+  Rectangle,
+} from 'react-leaflet';
 
-import styles from './WaterwaysMap.module.css';
+import styles from './Map.module.css';
+import Markers from './Markers';
 
 const minZoom = 7;
 
@@ -21,12 +28,15 @@ const WaterwaysMap = () => {
     <MapContainer
       scrollWheelZoom={true}
       bounds={mapBounds}
+      zoomControl={false}
       className={styles['mapContainer-div']}>
       <ConfigureMap />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+      <ZoomControl position="bottomleft" />
+      <Markers />
       <Rectangle bounds={mapBounds} />
     </MapContainer>
   );

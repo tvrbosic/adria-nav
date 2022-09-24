@@ -13,6 +13,7 @@
 
 # misc
 TODO.md
+data_sample.json
 .DS_Store
 .env.local
 .env.development.local

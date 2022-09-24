@@ -1,9 +1,9 @@
-import WaterwaysMap from './WaterwaysMap';
+import NavMap from './Map';
 
 const MapPage = () => {
   return (
     <div>
-      <WaterwaysMap />
+      <NavMap />
     </div>
   );
 };

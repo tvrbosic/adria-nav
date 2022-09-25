@@ -1,10 +1,16 @@
+import { Container } from 'react-bootstrap';
+
+import Header from '../../components/Header';
 import Map from './Map';
 
 const MapPage = () => {
   return (
-    <div>
-      <Map />
-    </div>
+    <>
+      <Header />
+      <Container className='justify-content-center'>
+        <Map />
+      </Container>
+    </>
   );
 };
 

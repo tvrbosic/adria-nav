@@ -38,7 +38,7 @@ const WaterwaysMap = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <LayersControl position="topright">
-        <LayersControl.Overlay name="Safety objects">
+        <LayersControl.Overlay checked name="Safety objects">
           <LayerGroup>
             <MarkerClusterGroup chunkedLoading>
               <Markers />

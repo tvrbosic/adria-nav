@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 import 'leaflet/dist/leaflet.css';
 import 'leaflet/dist/leaflet';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './index.css';
 import App from './App';
 

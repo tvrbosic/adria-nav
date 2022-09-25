@@ -6,8 +6,8 @@ import DataTablePage from './pages/DataTablePage';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<MapPage />}></Route>
-      <Route path="/data" element={<DataTablePage />}></Route>
+      <Route exact path='/' element={<MapPage />}></Route>
+      <Route exact path='/objects' element={<DataTablePage />}></Route>
     </Routes>
   );
 }

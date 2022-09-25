@@ -1,9 +1,9 @@
-import NavMap from './Map';
+import Map from './Map';
 
 const MapPage = () => {
   return (
     <div>
-      <NavMap />
+      <Map />
     </div>
   );
 };

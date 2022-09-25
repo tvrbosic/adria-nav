@@ -1,3 +1,4 @@
+import MarkerClusterGroup from 'react-leaflet-cluster';
 import {
   useMap,
   MapContainer,
@@ -39,7 +40,9 @@ const WaterwaysMap = () => {
       <LayersControl position="topright">
         <LayersControl.Overlay name="Safety objects">
           <LayerGroup>
-            <Markers />
+            <MarkerClusterGroup chunkedLoading>
+              <Markers />
+            </MarkerClusterGroup>
           </LayerGroup>
         </LayersControl.Overlay>
       </LayersControl>

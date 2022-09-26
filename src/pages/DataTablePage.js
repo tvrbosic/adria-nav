@@ -26,7 +26,6 @@ const NavObjectsData = () => {
         {dataLoaded && (
           <DataTable
             headers={[
-              'Redni broj',
               'Naziv objekta',
               'PS broj',
               'E broj',

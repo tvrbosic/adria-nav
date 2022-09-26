@@ -25,7 +25,7 @@ const ConfigureMap = () => {
   return null;
 };
 
-const WaterwaysMap = () => {
+const Map = () => {
   return (
     <MapContainer
       scrollWheelZoom={true}
@@ -35,10 +35,10 @@ const WaterwaysMap = () => {
       <ConfigureMap />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
       />
-      <LayersControl position="topright">
-        <LayersControl.Overlay checked name="Safety objects">
+      <LayersControl position='topright'>
+        <LayersControl.Overlay checked name='Safety objects'>
           <LayerGroup>
             <MarkerClusterGroup chunkedLoading>
               <Markers />
@@ -46,9 +46,9 @@ const WaterwaysMap = () => {
           </LayerGroup>
         </LayersControl.Overlay>
       </LayersControl>
-      <ZoomControl position="bottomleft" />
+      <ZoomControl position='bottomleft' />
     </MapContainer>
   );
 };
 
-export default WaterwaysMap;
+export default Map;

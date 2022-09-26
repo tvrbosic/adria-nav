@@ -25,13 +25,13 @@ const ConfigureMap = () => {
   return null;
 };
 
-const Map = () => {
+const Map = (props) => {
   return (
     <MapContainer
       scrollWheelZoom={true}
       bounds={mapBounds}
       zoomControl={false}
-      className={styles['mapContainer-div']}>
+      className={`${styles['mapContainer-div']} ${props.className}`}>
       <ConfigureMap />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

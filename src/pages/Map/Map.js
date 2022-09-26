@@ -31,7 +31,7 @@ const Map = (props) => {
       scrollWheelZoom={true}
       bounds={mapBounds}
       zoomControl={false}
-      className={`${styles['mapContainer-div']} ${props.className}`}>
+      className={`${styles.mapContainer} ${props.className}`}>
       <ConfigureMap />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

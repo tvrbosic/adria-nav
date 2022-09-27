@@ -2,7 +2,7 @@
 
 Interactive map with visualized navigation safety objects and object data in Croatian Adriatic Sea.
 
-Application was created with [React](https://reactjs.org/)
+Application was created with [React](https://reactjs.org/).
 
 ## Usage
 

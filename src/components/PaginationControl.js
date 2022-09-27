@@ -65,7 +65,12 @@ const PaginationControl = ({ currentPage, maxPage, setCurrentPage }) => {
         <Pagination.Prev disabled={!hasPrevious} onClick={setPrevPage} />
         {renderLeftEllipsis && <Pagination.Ellipsis disabled={true} />}
         {pageNumbers.map((number) => (
-          <Pagination.Item key={number} active={number === currentPage}>
+          <Pagination.Item
+            key={number}
+            active={number === currentPage}
+            onClick={() => {
+              setCurrentPage(number);
+            }}>
             {number}
           </Pagination.Item>
         ))}

@@ -1,12 +1,11 @@
-import styles from './MapPage.module.css';
 import Header from '../../components/Header';
 import Map from './Map';
 
 const MapPage = () => {
   return (
-    <div className={styles.layout}>
+    <div className='vh-100'>
       <Header />
-      <Map className={styles.content} />
+      <Map className='d-flex' />
     </div>
   );
 };

@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 
 import useHttpRequest from '../hooks/useHttpRequest';
 import Header from '../components/Header';
 import DataTable from '../components/DataTable';
+import LoadingOverlay from '../components/LoadingOverlay';
 
 const NavObjectsData = () => {
   const [objectData, setObjectData] = useState([]);
@@ -34,6 +35,15 @@ const NavObjectsData = () => {
             ]}
             data={objectData}
           />
+        )}
+        {!dataLoaded && (
+          <LoadingOverlay>
+            <Spinner
+              animation='border'
+              variant='primary'
+              style={{ width: '4rem', height: '4rem' }}
+            />
+          </LoadingOverlay>
         )}
       </Container>
     </>

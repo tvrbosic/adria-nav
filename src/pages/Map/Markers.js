@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 
 import useHttpRequest from '../../hooks/useHttpRequest';
 import MapMarker from './MapMarker';
+import LoadingOverlay from '../../components/LoadingOverlay';
 
 const Markers = () => {
   const [markerData, setMarkerData] = useState([]);
@@ -23,6 +25,15 @@ const Markers = () => {
         markerData.map((item) => (
           <MapMarker key={item.properties.pk} item={item} />
         ))}
+      {!dataLoaded && (
+        <LoadingOverlay>
+          <Spinner
+            animation='border'
+            variant='primary'
+            style={{ width: '4rem', height: '4rem' }}
+          />
+        </LoadingOverlay>
+      )}
     </>
   );
 };

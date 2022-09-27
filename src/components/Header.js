@@ -1,9 +1,14 @@
 import { Link, NavLink } from 'react-router-dom';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <Navbar collapseOnSelect expand='lg' variant='dark' bg='dark'>
+    <Navbar
+      collapseOnSelect
+      expand='lg'
+      variant='dark'
+      bg='dark'
+      className={`${props.className}`}>
       <Container>
         <Navbar.Brand href='/'>AdriaNav</Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />

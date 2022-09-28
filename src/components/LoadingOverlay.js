@@ -19,7 +19,7 @@ const LoadingSpinner = (props) => {
 
 const portalElement = document.getElementById('overlay');
 
-const Modal = (props) => {
+const LoadingOverlay = (props) => {
   return (
     <>
       {ReactDOM.createPortal(
@@ -34,4 +34,4 @@ const Modal = (props) => {
   );
 };
 
-export default Modal;
+export default LoadingOverlay;

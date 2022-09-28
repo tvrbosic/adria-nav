@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 
 import styles from './LoadingOverlay.module.css';
 
@@ -27,7 +27,13 @@ const LoadingOverlay = (props) => {
         portalElement
       )}
       {ReactDOM.createPortal(
-        <LoadingSpinner>{props.children}</LoadingSpinner>,
+        <LoadingSpinner>
+          <Spinner
+            animation='border'
+            variant='primary'
+            style={{ width: '4rem', height: '4rem' }}
+          />
+        </LoadingSpinner>,
         portalElement
       )}
     </>
